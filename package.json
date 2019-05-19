@@ -1,0 +1,17 @@
+{
+  "name": "cordova-plugin-grpc",
+  "version": "1.0.0",
+  "description": "",
+  "cordova": {
+    "id": "cordova-plugin-grpc",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-ios"
+  ],
+  "author": "Thickstat",
+  "license": "ISC"
+}
