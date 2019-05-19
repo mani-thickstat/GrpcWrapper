@@ -1,4 +1,4 @@
-package cordova-plugin-grpc;
+package cordova.plugin.grpc;
 
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CallbackContext;
