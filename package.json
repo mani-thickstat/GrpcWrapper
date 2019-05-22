@@ -5,11 +5,13 @@
   "cordova": {
     "id": "cordova-plugin-grpc",
     "platforms": [
+      "android",
       "ios"
     ]
   },
   "keywords": [
     "ecosystem:cordova",
+    "cordova-android",
     "cordova-ios"
   ],
   "author": "Thickstat",
