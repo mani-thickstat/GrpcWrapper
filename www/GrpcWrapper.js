@@ -1,35 +1,32 @@
-//var exec = require('cordova/exec');
+var exec = require('cordova/exec');
 
-module.exports.echo = function(arg0, success, error) {
-  cordova.exec(success, error, "GrpcWrapper", "echo", [arg0]);
+function GrpcWrapper(){};
+
+GrpcWrapper.prototype.coolMethod = function(arg0, success, error) {
+  exec(success, error, "GrpcWrapper", "coolMethod", [arg0]);
 };
 
-module.exports.onHold = function(arg0, success, error) {
-  cordova.exec(success, error, "GrpcWrapper", "onHold", [arg0]);
+GrpcWrapper.prototype.onHold = function(arg0, success, error) {
+  exec(success, error, "GrpcWrapper", "onHold", [arg0]);
 };
 
-module.exports.onRelease = function(arg0, success, error) {
-  cordova.exec(success, error, "GrpcWrapper", "onRelease", [arg0]);
+GrpcWrapper.prototype.onRelease = function(arg0, success, error) {
+  exec(success, error, "GrpcWrapper", "onRelease", [arg0]);
 };
 
-module.exports.onTap = function(arg0, success, error) {
-  cordova.exec(success, error, "GrpcWrapper", "onTap", [arg0]);
+GrpcWrapper.prototype.onTap = function(arg0, success, error) {
+  console.log("GrpcWrapper.js - OnTap() - Called");
+  exec(success, error, "GrpcWrapper", "onTap", [arg0]);
 };
 
-module.exports.startVoice = function(arg0, success, error) {
-  cordova.exec(success, error, "GrpcWrapper", "onStartGrpcTextToSpeech", [arg0]);
+GrpcWrapper.prototype.startVoice = function(arg0, success, error) {
+  exec(success, error, "GrpcWrapper", "onStartGrpcTextToSpeech", [arg0]);
 };
 
-module.exports.onSpeaking = function(arg0, success, error) {
-  cordova.exec(success, error, "GrpcWrapper", "onSpeaking", [arg0]);
+GrpcWrapper.prototype.onSpeaking = function(arg0, success, error) {
+  exec(success, error, "GrpcWrapper", "onSpeaking", [arg0]);
 };
 
-
-
-exports.echojs = function(arg0, success, error) {
-  if (arg0 && typeof(arg0) === 'string' && arg0.length > 0) {
-    success(arg0);
-  } else {
-    error('Empty message!');
-  }
-};
+if (typeof module != 'undefined' && module.exports) {
+  module.exports = GrpcWrapper;
+}
