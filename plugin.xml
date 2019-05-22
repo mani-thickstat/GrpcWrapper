@@ -18,6 +18,6 @@
          </feature>
       </config-file>
       <config-file parent="/*" target="AndroidManifest.xml" />
-      <source-file src="src/android/GrpcWrapper.java" target-dir="src/cordova/plugin/grpc/GrpcWrapper" />
+      <source-file src="src/android/GrpcWrapper.java" target-dir="src/cordova/plugin/grpc" />
    </platform>
 </plugin>
